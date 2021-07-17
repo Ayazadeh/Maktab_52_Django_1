@@ -1,0 +1,131 @@
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}
+    Tables
+{% endblock %}
+{% block body %}
+    <div class="content-section">
+        <div class="outer">
+            <div class="middle">
+                <div class="inner">
+                    <br/>
+                    {{ utils.flashed_messages() }}
+                    <br/>
+                    <h1 style="text-align:center;">tables</h1>
+                    {% if tables %}
+                        <hr class="intro-divider">
+                        <div class="center">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th width="15%"> table_number</th>
+                                    <th width="20%"> capacity</th>
+                                    <th width="20%"> status</th>
+                                    <th width="15%"> Assign</th>
+                                    <th width="15%"> Edit</th>
+                                    <th width="35%"> Delete</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for table in tables %}
+                                    <tr>
+                                        <td> {{ table.table_number }} </td>
+                                        <td> {{ table.table_capacity }} sits</td>
+                                        <td>
+                                            {% if table.status %}
+                                                {{ table.status.name }}
+                                            {% else %}
+                                                -
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <a href="{{ url_for('table.assign_table', id=table.id) }}">
+                                                <i class="fa fa-user-plus"></i> Assign
+                                            </a>
+                                        </td>
+                                        <td>
+                                                <i class="fa fa-pencil"></i> Edit
+                                            </a>
+                                        </td>
+                                        <td>
+                                                <i class="fa fa-trash"></i> Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="text-align: center">
+                    {% else %}
+                        <div style="text-align: center">
+                        <h3> No table have been added. </h3>
+                        <hr class="intro-divider">
+                    {% endif %}
+                    <a href="{{ url_for('table.add_table') }}" class="btn btn-default btn-lg">
+                        <i class="fa fa-plus"></i>
+                        Add table
+                    </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{#{% import "bootstrap/utils.html" as utils %}#}
+{#{% extends "base.html" %}#}
+{#{% block title %}Tables{% endblock %}#}
+{#{% block body %}#}
+{#    <div class="content-section">#}
+{#        <div class="outer">#}
+{#            <div class="middle">#}
+{#                <div class="inner">#}
+{#                    <br/>#}
+{#                    {{ utils.flashed_messages() }}#}
+{#                    <br/>#}
+{#                    <h1 style="text-align:center;">tables</h1>#}
+{#                    {% if tables %}#}
+{#                        <hr class="intro-divider">#}
+{#                        <div class="center">#}
+{#                            <table class="table table-striped table-bordered">#}
+{#                                <thead>#}
+{#                                <tr>#}
+{#                                    <th width="15%"> table_number</th>#}
+{#                                    <th width="30%"> capacity</th>#}
+{#                                    <th width="30%"> status</th>#}
+{#                                    <th width="15%"> Assign</th>#}
+{#                                </tr>#}
+{#                                </thead>#}
+{#                                <tbody>#}
+{#                                {% for table in tables %}#}
+{##}
+{#                                    <tr>#}
+{#                                        <td> {{ table.table_number }} </td>#}
+{#                                        <td> {{ table.table_capacity }} sits</td>#}
+{#                                        <td>#}
+{#                                            {% if table.status %}#}
+{#                                                {{ table.status.name }}#}
+{#                                            {% else %}#}
+{#                                                -#}
+{#                                            {% endif %}#}
+{#                                        </td>#}
+{#                                        <td>#}
+{#                                            <a href="{{ url_for('table.assign_table', id=table.id) }}">#}
+{#                                                <i class="fa fa-user-plus"></i> Assign#}
+{#                                            </a>#}
+{#                                        </td>#}
+{#                                    </tr>#}
+{#                                {% endfor %}#}
+{#                                </tbody>#}
+{#                            </table>#}
+{#                        </div>#}
+{#                    {% endif %}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

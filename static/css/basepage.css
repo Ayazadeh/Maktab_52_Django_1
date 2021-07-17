@@ -1,0 +1,300 @@
+/*------------------------------------------------------------------------------menu*/
+body {
+    position: sticky;
+    padding: 0%!important;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#home {;
+    height: 100vh;
+}
+
+#menu {;
+    height: 100vh;
+    padding-top: 50px;
+    background-color: #231d1f;
+}
+
+#menu_title {
+    text-align: center !important;
+    padding: 10vh;
+    display: block !important;
+    color: white;
+}
+@media only screen and (min-width: 650px) {
+    #about_us{
+        height: 100vh !important;
+        padding-top: 25vh !important;
+    }
+    #contact_us{
+         height: 100vh !important;
+         padding-top: 25vh !important;
+    }
+}
+#about_us {
+    padding-top: 0;
+    padding-bottom: 50px;
+    /*background-color: #231d1f;*/
+    background-image: url('../images/basepage_img/aboutus_bg.jpg');
+    background-size: cover;
+    background-attachment: fixed
+}
+
+#contact_us {
+    padding-top: 50px;
+    height: 100vh;
+    background-image: url('../images/basepage_img/contact-back.jpg');
+    background-size: cover;
+    background-attachment: fixed
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*.menu_bg {*/
+/*    background-image: url("2.jpg");*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    height: 730px;*/
+/*}*/
+
+.button {
+    padding: 40px 20px;
+    /*border-radius: 15%;*/
+    width: 100%;
+    /*table-layout: fixed;*/
+    /*background-image: url('1.jpg');*/
+    color: white;
+    font-family: "Comic Sans MS";
+    font-size: 15px;
+    border-color: white;
+    border-width: 3px;
+
+}
+
+.button:hover {
+    border-radius: 20%;
+
+}
+
+.modal-body {
+    padding: 0;
+    border: 0;
+}
+
+
+.checked {
+    color: yellow !important;
+}
+
+.uncheked {
+    color: white !important;
+
+}
+
+.star_rating {
+    text-align: center;
+    display: block;
+    padding-top: 15px;
+}
+
+.menu_item {
+    color: white;
+    text-align: center;
+    display: block;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    font-size: 26px;
+}
+
+.menu_img {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    padding-top: 30px;
+    width: 50%;
+    border-radius: 25px;
+}
+
+.menu {
+    height: 90%;
+    width: 90%;
+    alignment: center;
+    /*margin-top: %;*/
+}
+
+.menu:hover {
+    height: 100%;
+    width: 100%;
+    /*margin-top: 10px;*/
+    /*margin-bottom: 10px;*/
+    border-radius: 25px;
+    /*background: linear-gradient(145deg, #201a1c, #251f21);*/
+    /*box-shadow: 23px 23px 46px #161213,*/
+    /*-23px -23px 46px #30282b;*/
+    background-color: #473b3f;
+
+}
+/*---------------------------------------------------------------------------------------------------------------*/
+
+.list-group-item{
+    background-color: #a07963;
+}
+.menu-sub{
+    height: 70px;
+}
+.item-sub{
+    height: 100%;
+}
+.title-menu-sub{
+    color: #a8979c;
+    text-align: center !important;
+    background-color: #231d1f;
+    display: block !important;
+    font-size: 48px;
+}
+.title-menu-sub-item{
+    color: #1d1719;
+    padding-top: 16px;
+    /*padding-bottom: 15px;*/
+    text-align: center !important;
+    background-color: rgba(0, 0, 0, 0);
+    display: block !important;
+    font-size: 24px;
+}
+.item-img{
+    height: 100%;
+    border-radius: 50%;
+}
+.add-cart-icon{
+    padding-top: 18px;
+    padding-left: 20px;
+    height: 70%;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------home*/
+.bg-home {
+    background-image: url("../images/basepage_img/bg_home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 730px;
+}
+
+.fa {
+    font-size: 30px;
+    color: cornsilk;
+
+}
+
+.nav-tabs .nav-link.active {
+
+    background-color: transparent;
+    border: none;
+    color: #a8979c;
+    border-bottom: solid white 2px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+
+}
+
+.nav-tabs .nav-item {
+
+    background-color: transparent;
+    border: none;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-size: 22px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #a8979c;
+    border-bottom: solid white 2px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------taha*/
+
+
+.title {
+    color: white;
+    text-align: center !important;
+    padding-top: 10vh;
+    padding-bottom: 15px;
+    display: block !important;
+    font-size: 48px;
+}
+
+.title.home {
+    color: white;
+    text-align: left !important;
+    padding-top: 40vh;
+    padding-bottom: 15px;
+    padding-left: 10vh;
+    display: block !important;
+    font-size: 48px;
+}
+
+
+.logo {
+    align-content: center;
+    display: block;
+    float: right;
+    margin-right: 5vm;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
