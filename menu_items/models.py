@@ -18,7 +18,7 @@ class Categories(models.Model):
 
 
 class Price(models.Model):
-    start_date = models.DateTimeField()
+    start_date = models.DateTimeField(auto_now_add=True)
     amount = models.IntegerField()
     price = models.IntegerField(verbose_name="Enter price:", help_text="price of item")
 
@@ -30,7 +30,7 @@ class Discount(models.Model):
     name = models.CharField(max_length=100, verbose_name="name:",
                             help_text="name of discount", null=True, blank=True)
 
-    code = models.CharField(max_length=285)
+    code = models.CharField(max_length=30)
 
     amount = models.IntegerField(verbose_name="amount:", max_length=285,
                                  null=True, blank=True,
