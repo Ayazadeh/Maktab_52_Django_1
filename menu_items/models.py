@@ -27,8 +27,8 @@ class Price(models.Model):
     price = models.IntegerField(verbose_name="Enter price:",
                                 help_text="price of item")
 
-    def __Str__(self):
-        return f'{self.amount}: {self.price}'
+    def __str__(self):
+        return f'{self.id}# {self.amount}: {self.price}'
 
 
 class Discount(models.Model):
@@ -61,9 +61,8 @@ class MenuItems(models.Model):
     price = models.ForeignKey(Price, on_delete=models.CASCADE)
     discount = models.ForeignKey(Discount, on_delete=models.CASCADE)
 
-    image = models.FileField(validators="add image:",
+    image = models.FileField(upload_to="menu_items/images/", verbose_name="add image:",
                              help_text="image for item",
-                             upload_to='item/img',
                              null=True,
                              blank=True)
 
