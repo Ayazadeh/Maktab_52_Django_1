@@ -61,14 +61,9 @@ class MenuItems(models.Model):
     price = models.ForeignKey(Price, on_delete=models.CASCADE)
     discount = models.ForeignKey(Discount, on_delete=models.CASCADE)
 
-<<<<<<< HEAD
-    image = models.FileField(upload_to="menu_items/images/", verbose_name="add image:",
-                             help_text="image for item",
-=======
     image = models.FileField(verbose_name="add image:",
                              help_text="image for item",
                              upload_to='menu_items/images',
->>>>>>> dc59ae1b23ee51848d343a67b789792b3bdbd19d
                              null=True,
                              blank=True)
 

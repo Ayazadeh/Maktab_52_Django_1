@@ -27,6 +27,15 @@ class Orders(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     deleted = models.BooleanField()
 
+    @classmethod
+    def order_by_menu_item(cls):
+        return cls.objects.filter(menu_items=5)
+
     def __str__(self):
         return f'{self.id}# table:{self.table} - item:{self.menu_items}' \
                f'- number:{self.number} - status:{self.status}'
+
+
+# from orders.models import *
+# o = Orders()
+# o.order_by_menu_item()
