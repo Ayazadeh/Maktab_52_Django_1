@@ -1,11 +1,11 @@
 from django.db import models
+from django.utils.translation import gettext as _
 
 
-# Create your models here.
 class Categories(models.Model):
     name = models.CharField(max_length=50,
-                            verbose_name="Enter name:",
-                            help_text="name of category")
+                            verbose_name=_("Enter name:"),
+                            help_text=_("name of category"))
 
     description = models.CharField(max_length=50,
                                    verbose_name="description:",
