@@ -129,4 +129,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 LOCALE_PATHS = [BASE_DIR / 'locale']
+
+""" 
+problem of locale in windows;
+https://www.section.io/engineering-education/internationalization-in-django/
+"""
+
