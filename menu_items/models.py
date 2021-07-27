@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext as _
 
@@ -55,6 +56,16 @@ class Discount(models.Model):
         return f"{self.name} {self.code}"
 
 
+def menu_item_validator(value: str):
+    if not value.istitle():
+        raise ValidationError("name of menu item is wrong :(")
+
+
+def price_positive(value: Price):
+    if not value.price > 0:
+        raise ValidationError("price most be positive :(")
+
+
 class MenuItems(models.Model):
     name = models.CharField(max_length=30,
                             verbose_name=_("Enter name:"),
@@ -81,11 +92,18 @@ class MenuItems(models.Model):
                                  verbose_name=_("category"),
                                  help_text=_("Choose the group to which the item belongs"))
 
-    starting_cooking_time = models.TimeField(verbose_name=_("starting cooking time:"))
-    estimated_cooking_time = models.TimeField(verbose_name=_("estimated cooking time:"))
+    starting_cooking_time = models.TimeField(verbose_name=_("starting cooking time:"),
+                                             null=True,
+                                             blank=True)
+
+    estimated_cooking_time = models.TimeField(verbose_name=_("estimated cooking time:"),
+                                              null=True,
+                                              blank=True)
+
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
-    deleted = models.BooleanField(verbose_name=_("delete"))
+    deleted = models.BooleanField(verbose_name=_("delete"),
+                                  default=False)
 
     def __str__(self):
         return f'{self.id}# {self.name}: {self.price}'

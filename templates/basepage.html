@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../static/css/basepage.css">
-    <script type="text/javascript"
-            src="{{ url_for('static', filename='basepage.js') }}"></script>
-    <script type="text/javascript"
-            src="../static/basepage.js"></script>
-
+    <link rel="stylesheet" href="{% static 'css/basepage.css' %}">
+    <script type="text/javascript" src="{% static 'basepage.js' %}"></script>
     <title>AKBAR CAFE</title>
 </head>
 <body data-spy="scroll" class="container-fluid max-width" onload="menu_list()">
@@ -39,7 +35,6 @@
                         <li class="nav-item"><a class="nav-link " href="#about_us">About</a></li>
                         <li class="nav-item"><a class="nav-link " href="#contact_us">Contact us</a></li>
                     </ul>
-                    <!--                    <i class="fa fa-coffee"></i>-->
                 </div>
             </nav>
             <h1 class="title home">JOIN THE COFFEE</h1>
@@ -60,7 +55,6 @@
 
             </div>
             <!-- Swiper JS -->
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <!-- Initialize Swiper -->
 
         </div>
@@ -80,7 +74,7 @@
         </div>
         <div class="row" style="padding-right: 10vh;padding-left: 10vh;padding-top: 20px">
             <div class="col-sm-4 " style="border-right: solid 5px #875248">
-                <img class="logo" src="../static/images/basepage_img/logo.png" style="height: 150px;width: 150px"
+                <img class="logo" src="{% static 'images/basepage_img/logo.png' %}" style="height: 150px;width: 150px"
                      alt="image">
             </div>
             <div class="col-sm-4 " style="color: white">
@@ -120,7 +114,7 @@
             </div>
         </div>
         <div class="col-sm-4">
-            <img class="logo" src="../static/images/basepage_img/contact-img.jpg" style="height: 90%;width:90%;">
+            <img class="logo" src="{% static 'images/basepage_img/contact-img.jpg' %}" style="height: 90%;width:90%;">
         </div>
         <div class="col-sm-4">
             <div class="row" style="color: white">
@@ -135,19 +129,19 @@
             </div>
             <div class="row phone" style="color: #806f75;height: 50px">
                 <div style="height: 100%">
-                    <img src="../static/images/contact_icon/phone_icon.png" style="height: 90%">
+                    <img src="{% static 'images/contact_icon/phone_icon.png' %}" style="height: 90%">
                 </div>
                 <div style="padding:4px;padding-left:10px;font-size: 22px">021-5548697</div>
             </div>
             <div class="row address" style="color: #806f75;height: 50px">
                 <div style="height: 100%">
-                    <img src="../static/images/contact_icon/address_icon.png" style="height: 90%">
+                    <img src="{% static 'images/contact_icon/address_icon.png' %}" style="height: 90%">
                 </div>
                 <div style="padding:4px;padding-left:10px;font-size: 22px">Iran-Tehran</div>
             </div>
             <div class="row email" style="color: #806f75;height: 50px">
                 <div style="height: 100%">
-                    <img src="../static/images/contact_icon/email_icon.png" style="height: 90%">
+                    <img src="{% static 'images/contact_icon/email_icon.png' %}" style="height: 90%">
                 </div>
                 <div style="padding:4px;padding-left:10px;font-size: 22px">akbarcafe@gmail.com</div>
             </div>

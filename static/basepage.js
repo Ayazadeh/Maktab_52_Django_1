@@ -27,7 +27,6 @@ function menu_list() {
     // console.log(json)
     // console.log(json.toJSON)
     for (let category in json) {
-        console.log(typeof category)
         let swiper_slide = document.createElement("div")
         swiper_slide.className = "swiper-slide"
         swiper_slide.setAttribute("role", "group")
@@ -49,7 +48,7 @@ function menu_list() {
 
         let img = document.createElement("img")
         img.className = "menu_img"
-        img.setAttribute("src", "icon/" + category + ".png")
+        img.setAttribute("src", "images/icon/" + category + ".png")
         img_div.append(img)
 
         let stars = document.createElement("div")
@@ -115,7 +114,7 @@ function menu_list() {
 
             let item_img = document.createElement("img")
             item_img.className = "item-img"
-            item_img.setAttribute("src", `menu_img/${category}/${modal_content}.jpg`)
+            item_img.setAttribute("src", `images/menu_img/${category}/${modal_content}.jpg`)
             item_sub.append(item_img)
 
             let name_of_item = document.createElement("div")
