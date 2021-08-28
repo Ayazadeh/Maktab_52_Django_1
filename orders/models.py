@@ -44,8 +44,8 @@ class Orders(models.Model):
     deleted = models.BooleanField(verbose_name=_("delete"))
 
     @classmethod
-    def order_by_menu_item(cls):
-        return cls.objects.filter()
+    def order_by_menu_item(cls, id):
+        return cls.objects.filter(menu_items_id=id)
 
     def __str__(self):
         return f'{self.id}# table:{self.table} - item:{self.menu_items}' \
